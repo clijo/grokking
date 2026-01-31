@@ -1,23 +1,20 @@
 # grokking modular addition 
 
-<figure>
+<div align="center">
   <img src="./assets/grokking-mod-add.png" alt="Train vs test accuracy">
-  <figcaption>
-    Fig. 1 - Train and test accuracy over epochs; each step is 100 epochs. Training reaches 100% quickly, while test accuracy stays near 0 until ~6000 epochs before rising to 100%.
-  </figcaption>
-</figure>
+  <br>
+  <em>Fig. 1 - Train and test accuracy over epochs; each step is 100 epochs. Training reaches 100% quickly, while test accuracy stays near 0 until ~6000 epochs before rising to 100%.</em>
+</div>
+
 
 This project aims to reproduce "grokking" phenomenon in modular addition task, viz. $(a,b)\mapsto (a+b) \mod 113$, using the following 1-layer transformer model.
 
-<figure>
+<div align="center">
   <img src="./assets/model.png" alt="Model architecture">
-  <figcaption>
-    Fig. 2 - Model architecture visualized using 
-    <a href="https://github.com/google-deepmind/treescope">Treescope</a>. 
-    See the full architecture in 
-    <a href="./assets/model.html">model.html</a>.
-  </figcaption>
-</figure>
+  <br>
+  <em>Fig. 2 - Model architecture visualized using <a href="https://github.com/google-deepmind/treescope">Treescope</a>. See the full architecture in <a href="./assets/model.html">model.html</a>.</em>
+</div>
+
 
 Note that we do not use causal attention; it is not a `seq2seq` model.
 
