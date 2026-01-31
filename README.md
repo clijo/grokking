@@ -12,7 +12,7 @@ This project aims to reproduce "grokking" phenomenon in modular addition task, v
 <div align="center">
   <img src="./assets/model.png" alt="Model architecture">
   <br>
-  <em>Fig. 2 - Model architecture visualized using <a href="https://github.com/google-deepmind/treescope">Treescope</a>. See the full architecture in <a href="./assets/model.html">model.html</a>.</em>
+  <em>Fig. 2 - Model architecture visualized using <a href="https://github.com/google-deepmind/treescope">Treescope</a>.</em>
 </div>
 
 

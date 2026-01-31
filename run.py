@@ -113,10 +113,13 @@ def main():
         dim_feedforward=config.dim_feedforward,
         dropout=config.dropout,
     ).to(device)
-    with treescope.active_autovisualizer.set_scoped(treescope.ArrayAutovisualizer()):
-        contents = treescope.render_to_html(model)
-    with open("./assets/model.html", "w") as f:
-        f.write(contents)
+
+    # uncomment this to create a cool viz of the model using treescope
+    # with treescope.active_autovisualizer.set_scoped(treescope.ArrayAutovisualizer()):
+    #     contents = treescope.render_to_html(model)
+    # with open("./assets/model.html", "w") as f:
+    #     f.write(contents)
+    
     model = torch.compile(model)
 
     n_params = sum(p.numel() for p in model.parameters())

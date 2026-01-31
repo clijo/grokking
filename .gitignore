@@ -1,5 +1,6 @@
 .DS_Store
 wandb
+assets/model.html 
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
