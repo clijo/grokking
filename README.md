@@ -31,4 +31,4 @@ Note that we do not use causal attention; it is not a `seq2seq` model.
     ```
 
 # Note 
-- `weight_decay` is a key parameter to induce grokking: after the model reaches a "memorization basin" where the gradient loss term become negligible, the only signal is from the regularization term, say $\lambda\|\cdot\|^2$ which pushes the learned parameter to be in a closed ball centred at zero with radius inversely proportional to $\lambda$; larger the $\lambda$, stronger is this signal, and ideally it moves the parameter to a "generalization basin".
+- `weight_decay` is a key parameter to induce grokking: after the model reaches a "memorization basin" where the gradient of the loss term is negligible, the only signal for descent is from the gradient of the regularization term, say $\lambda\|\cdot\|^2$ which pushes the learned parameter to be in a closed ball centred at zero with radius inversely proportional to $\lambda$; larger the $\lambda$, stronger is this signal, and ideally it moves the parameter to a "generalization basin".
