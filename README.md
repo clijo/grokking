@@ -3,7 +3,7 @@
 <div align="center">
   <img src="./assets/grokking-mod-add.png" alt="Train vs test accuracy">
   <br>
-  <em>Fig. 1 - Train and test accuracy over epochs; each step is 100 epochs. Training reaches 100% quickly, while test accuracy stays near 0 until ~6000 epochs before rising to 100%.</em>
+  <em>Fig. 1 - Train and test accuracy over epochs; each step is 100 epochs. Training reaches 100% quickly, while test accuracy stays near 0 until ~6000 epochs before rising to 100%. Train sample size: 2553; Test sample size: 10216; Model parameters: 64,689.</em>
 </div>
 
 
@@ -31,5 +31,4 @@ Note that we do not use causal attention; it is not a `seq2seq` model.
     ```
 
 # Note 
-- Fig 1 was created using by using 20% of the dataset as training set.
-- `weight_decay` is a key parameter to induce grokking.
+- `weight_decay` is a key parameter to induce grokking: after the model reaches a "memorization basin" where the gradient loss term become negligible, the only signal is from the regularization term, say $\lambda\|\cdot\|^2$ which pushes the learned parameter to be in a closed ball centred at zero with radius inversely proportional to $\lambda$; larger the $\lambda$, stronger is this signal, and ideally it moves the parameter to a "generalization basin".

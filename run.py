@@ -102,8 +102,8 @@ def main():
         num_workers=config.num_workers,
         pin_memory=config.pin_memory,
     )
-    print(f"Train samples: {len(train_loader.dataset)}")
-    print(f"Test samples: {len(test_loader.dataset)}")
+    print(f"Train sample size: {len(train_loader.dataset)}")
+    print(f"Test sample size: {len(test_loader.dataset)}")
 
     # Model
     model = ModularAdditionTransformer(
